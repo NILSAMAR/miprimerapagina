@@ -1,0 +1,452 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* list-style: none; //quiere decir que le saque los puntitos a los buscadores*/
+ol,
+ul {
+    list-style: none;
+}
+
+/* text-decoration: none//eliminemos la decoracion */
+a {
+    text-decoration: none;
+}
+
+/*PASO 21
+-----------------------------------------------------------*/
+/*MENU*/
+#check {
+    display: none;
+}
+
+    .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    }
+
+/*PASO 21- APLICAR MEDIAS QUERIES*/
+/*estilos para pantallas mas pequeñas menores a 768px*/
+@media (max-width: 768px) {
+
+    /*aqui puedes escribir los estilos que s epalicaran en ela spantallas mas pequeñas*/
+    header {
+        background-color: red;
+    }
+
+    .acerca-imagen {
+        text-align: center;
+    }
+
+    .acerca-imagen {
+        margin-bottom: 40px;
+    }
+
+    .fuente-acento {
+        text-align: center;
+    }
+
+    #encabezado ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: aquamarine;
+        text-align: center;
+
+        top: 80px;
+        left: 100%;
+        transition: all 0.5s;
+    }
+
+    /*lo muestra de costado*/
+    .checkbtn {
+        display: block;
+    }
+
+    #check:checked ~ ul{
+        left: 0%;
+        display: block;
+    }
+
+    #encabezado nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        background-color: aquamarine;
+    }
+
+    #encabezado nav ul li a {
+        font-size: 20px;
+    }
+
+    #check:checked~.checkbtn {
+        color: aqua;
+    }
+}
+
+/*HEADER: el encabezado de la pagina*
+------------------------------------------------------------------------------------------/
+/*Display-flex: ya hay movimiento, ordena los elementos dentro de izquiera a derecha*/
+/*alig-items:centerLo centra los items verticalmente*/
+/*justify-content:space-between,separacion igual entre ellos , el "a" y el "nav"*/
+header {
+    color: white;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*el corazon añadido al encabezado*/
+header a i {
+    color: white;
+    font-size: 1cm;
+    padding: 0.5cm;
+}
+
+/*los buscadores de emcabezado*/
+header nav ul {
+    display: flex;
+    gap: 1.1cm;
+}
+
+header nav ul li a {
+    color: white;
+}
+
+.fuente-acento {
+    color: yellow;
+    font-size: 50px;
+}
+
+/*MAIN:
+------------------------------------------------------------------------------------------*/
+.seccion-principal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    margin-top: 5px;
+    width: 100%;
+}
+
+/*SECCION1
+Display-flex: ya hay movimiento, ordena los elementos dentro de izquiera a derecha*/
+/*justify-content:center,centra los elementosdivs , el div"acerca de mi" y 
+el "acerca-imagen"*/
+.seccion-1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seccion-1 {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.05em;
+    border: 0.05px solid white;
+    width: 100%;
+}
+
+.acerca-imagen img {
+    display: flex;
+    justify-content: center;
+    padding: 0.05em;
+    width: 50%;
+    height: 50%;
+}
+.acerca-imagen-1 img {
+    padding: 0.05em;
+    width: 100%;
+    height: 100%;
+}
+
+/*estilo del titulo acerca de mi*/
+/*text-align: center, centra el contenido*/
+h2 {
+    color: white;
+    background-color: rgb(76, 0, 255);
+    text-align: center;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.parrafo-1 {
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid yellow;
+    max-width: 100%;
+}
+
+.parrafo-2 {
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid yellow;
+    max-width: 500px;
+}
+
+/* .seccion-1 img {
+    width: 100%;
+    height: 100%;
+} */
+/*SECCION-2
+Display-flex: ya hay movimiento, ordena los elementos dentro de izquiera a derecha*/
+/*justify-content:center,centra los elementosdivs , el div"acerca de mi" y 
+el "acerca-imagen"*/
+
+.seccion-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seccion-2 {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.05em;
+    width: 100%;
+}
+
+/*mi imagen se adapte caundo lo reduzco*/
+.seccion-2 img {
+    width: 100%;
+    height: 100%;
+}
+
+/*SECCION 2-1 /
+Display-flex: ya hay movimiento, ordena los elementos dentro de izquiera a derecha*/
+/*justify-content:center,centra los elementosdivs , el div"acerca de mi" y 
+el "acerca-imagen"*/
+.seccion-2-1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seccion-2-1 {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1em;
+}
+
+.seccion-3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*SECCION 3 /SERVICIO-1
+Display-flex: ya hay movimiento, ordena los elementos dentro de izquiera a derecha*/
+/*justify-content:center,centra los elementosdivs , el div"acerca de mi" y 
+el "acerca-imagen"*/
+.seccion-3 {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    border: 5px solid #fff;
+}
+
+/*estilo del titulo PISCINA EN LA MOLINA/PISCINA EN LAS CASUARINAS*/
+/*text-align: center, centra el contenido*/
+/*justify-content:center,PISCINA EN LA MOLINA/PISCINA EN LAS CASUARINAS*/
+h3 {
+    color: white;
+    background-color: rgb(76, 0, 255);
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+}
+
+/*estilo del titulo PISCINA ASIMETRICA*/
+/*Display-flex: ya hay movimiento, ordena los elementos dentro de izquiera a derecha*/
+/*justify-content:center,centra PISCINA ASIMETRICA*/
+h4 {
+    color: white;
+    background-color: rgb(225, 0, 255);
+    display: flex;
+    justify-content: center;
+}
+
+/*SERVICIO 1*/
+.servicio-1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(235, 172, 235);
+    padding: 1em;
+    border: 3px solid #fff;
+    max-width: 500px;
+}
+
+.servicio-1 img {
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    padding: 3em;
+    border: 1px solid #fff;
+}
+
+.parrafo-4 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 500px;
+}
+
+/*SERVICIO 2*/
+.servicio-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: greenyellow;
+    padding: 1em;
+    border: 3px solid #fff;
+    max-width: 500px;
+}
+
+.servicio-2 img {
+    width: 400px;
+    height: 400px;
+    padding: 3em;
+    border: 1px solid #fff;
+}
+
+/*SERVICIO 3*/
+.servicio-3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: yellow;
+    padding: 1em;
+    border: 3px solid #fff;
+    max-width: 500px;
+}
+
+.servicio-3 img {
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    padding: 3em;
+    border: 1px solid #fff;
+}
+
+/*FOOTER*/
+footer {
+    color: black;
+    background-color: white;
+    width: 99%;
+}
+
+footer {
+    display: block;
+}
+
+#footer {
+    padding: 1em;
+}
+
+#footer nav ul li a {
+    text-decoration: white;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+a i.fa-solid.fa-heart.fixed {
+    position: fixed;
+    bottom: 22px;
+    right: 39px;
+}
+
+.fa.solid,
+fas {
+    font-weight: 900;
+}
+
+element.style {
+    color: brown;
+}
+
+
+/*PASO 21 AÑADIMOS PROPIEDAD QUERIES ANUESTRO SITIO*/
+@media (min-width: 768px) {
+    .seccion-1 {
+        width: 96%;
+        /*45% porque debe de tener en cuenta margenes que rompan el formato*/
+    }
+}
+
+@media (min-width: 1024px) {
+    .seccion-1 {
+        width: 96%;
+    }
+}
+
+@media (min-width: 768px) {
+    .seccion-2 {
+        width: 96%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .seccion-2 {
+        width: 96%;
+    }
+}
+
+@media (min-width: 768px) {
+    .seccion-3 {
+        width: 96%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .seccion-3 {
+        width: 96%;
+    }
+}
+
+@media (min-width: 768px) {
+    .servicio-1 {
+        width: 96%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .servicio-1 {
+        width: 96%;
+    }
+}
+
+@media (min-width: 768px) {
+    .servicio-2 {
+        width: 96%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .servicio-2 {
+        width: 96%;
+    }
+}
